@@ -37,6 +37,39 @@
     section svg {
         max-width: 85vw;
     }
+
+    section svg path {
+        fill: transparent;
+        stroke: #fff;
+        stroke-width: 3px;
+        stroke-dasharray: 0px;
+        stroke-dashoffset: 0px;
+        animation-name: svg;
+        animation-duration: 500ms;
+        animation-timing-function: ease-in;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 2;
+    }
+
+    section svg path:nth-of-type(1) {
+        animation-delay: 100ms;
+    }
+
+    @keyframes svg {
+        0% {
+            stroke-dasharray: 638px;
+            stroke-dashoffset: -638px;
+        }
+
+        50% {
+            stroke-dashoffset: 638px;
+        }
+
+        100% {
+            stroke-dasharray: 638px;
+            stroke-dashoffset: 0px;
+        }
+    }
 </style>
 
 <body>
