@@ -22,6 +22,7 @@
         background-color: #1b251a;
         font-family: "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         height: 100vh;
@@ -29,27 +30,20 @@
     }
 
     section {
-        width: 290px;
-        height: 90px;
         position: relative;
         overflow: hidden;
         z-index: 1;
     }
-    section h1 {
-        font-size: 40px;
-        color: #fff;
-        margin: 0;
-    }
 
     section svg {
-        max-width: 82vw;
-        max-height: 190px;
-        margin-top: 2rem;
+        width: 160px;
+        height: 105px;
+        margin-bottom: 6rem;
     }
 
     section svg path {
         fill: transparent;
-        stroke: #fff;
+        stroke: #74ba64;
         stroke-width: 3px;
         stroke-dasharray: 0px;
         stroke-dashoffset: 0px;
@@ -84,14 +78,24 @@
         margin-top: 24px;
         display: block;
         letter-spacing: 1px;
-        font-size: 24px;
-        color: #355c2c;
+        font-size: 16px;
+        color: rgb(255 255 255 / 35%);
+        z-index: 1;
     }
+
     canvas {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate3d(-50%, -50%, 0px);
+        background-repeat: no-repeat;
+        background-image: url(./header-bg.jpg);
+        background-size: 100% 240px;
+        background-position: top center;
+        background-blend-mode: color-burn;
+        background-color: rgb(27 37 26 / 80%);
+        box-shadow: 0 0 30px -10px rgb(255 255 255 / 10%);
+        border-radius: 50%;
     }
 </style>
 
@@ -108,11 +112,10 @@
                 </path>
             </g>
         </svg>
-        <h1>90Theme</h1>
     </section>
     <a href="mailto:info@90theme.ir">info@90theme.ir</a>
-    <canvas width="500" height="500" data-margin="35" data-type="grid" data-elementsize="2"
-        data-color="#74ba64"></canvas>
+    <canvas width="380" height="380" data-margin="20" data-type="grid" data-elementsize="1.5"
+        data-color="#74ba641c"></canvas>
     <script src="dopdots.bundle.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
