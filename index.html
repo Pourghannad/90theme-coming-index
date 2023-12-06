@@ -19,25 +19,22 @@
         padding: 0;
         margin: 0;
         overflow: hidden;
-        background-color: #74ba64;
-        text-align: center;
+        background-color: #1b251a;
         font-family: "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
     }
 
     section {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        background-image: url("./header-bg.jpg");
-        width: 100%;
-        height: 480px;
-        min-height: 68vh;
-        max-height: 75vh;
-        background-repeat: no-repeat;
-        background-size: cover;
+        width: 290px;
+        height: 90px;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
     }
-
     section h1 {
         font-size: 40px;
         color: #fff;
@@ -90,6 +87,12 @@
         font-size: 24px;
         color: #355c2c;
     }
+    canvas {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0px);
+    }
 </style>
 
 <body>
@@ -108,6 +111,14 @@
         <h1>90Theme</h1>
     </section>
     <a href="mailto:info@90theme.ir">info@90theme.ir</a>
+    <canvas width="500" height="500" data-margin="35" data-type="grid" data-elementsize="2"
+        data-color="#74ba64"></canvas>
+    <script src="dopdots.bundle.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            dopDots(document.querySelector("canvas").getContext("2d"));
+        });
+    </script>
 </body>
 
 </html>
