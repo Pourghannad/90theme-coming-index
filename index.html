@@ -81,6 +81,32 @@
         font-size: 16px;
         color: rgb(255 255 255 / 35%);
         z-index: 1;
+        letter-spacing: 0px;
+        opacity: 0;
+        animation-name: Email;
+        animation-delay: 650ms;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-play-state: running;
+        animation-duration: 450ms;
+    }
+    @keyframes Email {
+        0% {
+            opacity: 0;
+        }
+        30% {
+            opacity: 1;
+            letter-spacing: -3px;
+        }
+        50% {
+            opacity: 1;
+            letter-spacing: 5px;
+        }
+        100% {
+            opacity: 1;
+            letter-spacing: 0px;
+        }
+        
     }
 
     canvas {
