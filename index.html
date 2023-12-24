@@ -38,7 +38,7 @@
     section svg {
         width: 160px;
         height: 105px;
-        margin-bottom: 6rem;
+        margin-bottom: 5px;
     }
 
     section svg path {
@@ -123,8 +123,20 @@
         background-position: top center;
         background-blend-mode: color-burn;
         background-color: rgb(27 37 26 / 80%);
-        box-shadow: 0 0 8px 0px rgb(255 255 255 / 7%);
+        box-shadow: 0 0 3px -1px rgb(255 255 255 / 10%);
         border-radius: 50%;
+    }
+
+    footer {
+        position: absolute;
+        bottom: 0;
+        color: rgb(255 255 255 / 9%);
+    }
+
+    @media (max-height: 400px) {
+        footer {
+            display: none;
+        }
     }
 </style>
 
@@ -143,7 +155,8 @@
         </svg>
     </section>
     <a href="mailto:info@90theme.ir">info@90theme.ir</a>
-    <canvas width="380" height="380" data-margin="20" data-type="grid" data-elementsize="1.5"
+    <footer>© 2014 - 2023 </footer>
+    <canvas width="325" height="325" data-margin="20" data-type="grid" data-elementsize="1.5"
         data-color="#74ba6438"></canvas>
     <script src="dopdots.bundle.js"></script>
     <script>
